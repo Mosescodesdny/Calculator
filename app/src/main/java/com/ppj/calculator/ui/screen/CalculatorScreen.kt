@@ -37,22 +37,31 @@ fun CalculatorScreen(vm: CalculatorViewModel = viewModel()) {
 
         Column {
             Row {
-                Button(onClick = { vm.onNumberClick(1) }) { Text("1") }
-                Button(onClick = { vm.onNumberClick(2) }) { Text("2") }
-                Button(onClick = { vm.onNumberClick(3) }) { Text("3") }
-                Button(onClick = { vm.onOperatorClick('+') }) { Text("+") }
+                Button(onClick = { vm.onNumberClick(7) }, modifier = Modifier.weight(1f)) { Text("7") }
+                Button(onClick = { vm.onNumberClick(8) }, modifier = Modifier.weight(1f)) { Text("8") }
+                Button(onClick = { vm.onNumberClick(9) }, modifier = Modifier.weight(1f)) { Text("9") }
+                Button(onClick = { vm.onOperatorClick('/') }, modifier = Modifier.weight(1f)) { Text("/") }
             }
 
             Row {
-                Button(onClick = { vm.onNumberClick(4) }) { Text("4") }
-                Button(onClick = { vm.onNumberClick(5) }) { Text("5") }
-                Button(onClick = { vm.onNumberClick(6) }) { Text("6") }
-                Button(onClick = { vm.onOperatorClick('-') }) { Text("-") }
+                Button(onClick = { vm.onNumberClick(4) }, modifier = Modifier.weight(1f)) { Text("4") }
+                Button(onClick = { vm.onNumberClick(5) }, modifier = Modifier.weight(1f)) { Text("5") }
+                Button(onClick = { vm.onNumberClick(6) }, modifier = Modifier.weight(1f)) { Text("6") }
+                Button(onClick = { vm.onOperatorClick('*') }, modifier = Modifier.weight(1f)) { Text("*") }
             }
 
             Row {
-                Button(onClick = { vm.onEquals() }) { Text("=") }
-                Button(onClick = { vm.onClear() }) { Text("C") }
+                Button(onClick = { vm.onNumberClick(1) }, modifier = Modifier.weight(1f)) { Text("1") }
+                Button(onClick = { vm.onNumberClick(2) }, modifier = Modifier.weight(1f)) { Text("2") }
+                Button(onClick = { vm.onNumberClick(3) }, modifier = Modifier.weight(1f)) { Text("3") }
+                Button(onClick = { vm.onOperatorClick('-') }, modifier = Modifier.weight(1f)) { Text("-") }
+            }
+
+            Row {
+                Button(onClick = { vm.onNumberClick(0) }, modifier = Modifier.weight(1f)) { Text("0") }
+                Button(onClick = { vm.onClear() }, modifier = Modifier.weight(1f)) { Text("C") }
+                Button(onClick = { vm.onEquals() }, modifier = Modifier.weight(1f)) { Text("=") }
+                Button(onClick = { vm.onOperatorClick('+') }, modifier = Modifier.weight(1f)) { Text("+") }
             }
         }
     }
