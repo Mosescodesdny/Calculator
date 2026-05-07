@@ -47,4 +47,11 @@ class CalculatorViewModel : ViewModel() {
     fun onClear() {
         state = CalculatorState()
     }
+    fun onDecimalClick() {
+        if (!state.display.contains(".")) {
+            state = state.copy(
+                display = state.display + "."
+            )
+        }
+    }
 }
